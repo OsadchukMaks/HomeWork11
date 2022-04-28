@@ -1,6 +1,9 @@
 package aviacompany.aircraft.instances;
 
-import java.util.Arrays;
+import record.CompactDisk;
+import sheffpovar.Vegetable;
+
+import java.util.*;
 
 public class AircraftPort {
 
@@ -43,4 +46,16 @@ public class AircraftPort {
         }
 
     }
+
+    public void printAll() {
+        System.out.println(Arrays.toString(aircrafts));
+    }
+
+    public List<Aircraft> removeDuplicates(List<Aircraft> aircrafts) {
+
+        Set<Aircraft> set = new HashSet<>(aircrafts);
+
+        return new ArrayList<>(set);
+    }
 }
+

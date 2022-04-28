@@ -3,8 +3,9 @@ package record;
 import sheffpovar.Calculatable;
 import sheffpovar.Printable;
 import sheffpovar.Sortable;
+import sheffpovar.Vegetable;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class CompactDisk implements Calculatable, Sortable, Printable {
 
@@ -47,10 +48,14 @@ public class CompactDisk implements Calculatable, Sortable, Printable {
 
     @Override
     public void printAll() {
-        for (MusicComposion composion : musicComposions) {
+        System.out.println(Arrays.toString(musicComposions));
+    }
 
-            System.out.println(composion);
+    public List<CompactDisk> removeDuplicates(List<CompactDisk> compactDisks) {
 
-        }
+        Set<CompactDisk> set = new HashSet<>(compactDisks);
+
+        return new ArrayList<>(set);
     }
 }
+

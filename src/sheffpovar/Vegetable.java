@@ -13,9 +13,7 @@ public abstract class Vegetable implements Comparable<Vegetable> {
         this.color = color;
     }
 
-    public int getCalories() {
-        return calories;
-    }
+    public int getCalories() { return calories; }
 
     @Override
     public int compareTo(Vegetable v) {
